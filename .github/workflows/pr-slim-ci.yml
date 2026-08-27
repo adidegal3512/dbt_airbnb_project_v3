@@ -33,7 +33,7 @@ jobs:
           echo "PR will build into schema: DBT_$SANITIZED"
       - run: cd airbnb && ub run dbt deps --profile-dir _prod_profiles --target dev
       - name: Download latest prod-target artifact main
-        uses: dawidd/action-download-artifiact@v21
+        uses: dawidd6/action-download-artifact@v21
         with:
           workflow: prod-build.yml
           branch: main
